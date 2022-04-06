@@ -1,2 +1,2 @@
 # Lyaon-Bot
-A bot for all of Lyaons needs
+A Discord.JS v13 discord bot for all of Lyaon's needs.
