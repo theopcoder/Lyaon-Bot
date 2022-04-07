@@ -9,9 +9,9 @@ const prefix = '?';
  
 client.commands = new Discord.Collection();
  
-const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+const commandFiles = fs.readdirSync('./commands/bot').filter(file => file.endsWith('.js'));
 for(const file of commandFiles){
-    const command = require(`./commands/${file}`);
+    const command = require(`./commands/bot/${file}`);
  
     client.commands.set(command.name, command);
 }
@@ -21,7 +21,7 @@ client.once('ready', () => {
     client.user.setActivity('Torturing Lyaon', { type: 'STREAMING'});
 });
  
-client.on('message', message =>{
+client.on("messageCreate", message => { //Changed message to messageCreate
     if(!message.content.startsWith(prefix) || message.author.bot) return;
  
     const args = message.content.slice(prefix.length).split(/ +/);
@@ -29,7 +29,7 @@ client.on('message', message =>{
  
     if(command === 'ping'){
         client.commands.get('ping').execute(message, args);
-    } 
+    };
 });
  
 client.login(key);
