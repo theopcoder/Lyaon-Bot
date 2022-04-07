@@ -1,10 +1,7 @@
-const Discord = require('discord.js');
-const token = require("./Token.js");
-const { Client, Intents } = require('discord.js');
+const { client, Intents } = require('discord.js');
 const allIntents = new Intents(32767);
-const client = new Discord.Client({ intents: allIntents });
-const fs = require('fs');
-
+const Discord = require('discord.js');
+const fs = require('fs')
 const prefix = '?';
  
 client.commands = new Discord.Collection();
