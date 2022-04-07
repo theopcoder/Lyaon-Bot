@@ -1,8 +1,9 @@
-const { client, Intents } = require('discord.js');
-const allIntents = new Intents(32767);
 const Discord = require('discord.js');
 const fs = require('fs')
 const prefix = '?';
+const client = new Discord.Client(32767);
+const allIntents = Discord.Intents.all();
+const bot = new Discord.Client({ intents: Discord.Intents.ALL });
  
 client.commands = new Discord.Collection();
  
