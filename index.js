@@ -4,6 +4,7 @@ const prefix = '?';
 const client = new Discord.Client(32767);
 const allIntents = Discord.Intents.all();
 const bot = new Discord.Client({ intents: Discord.Intents.ALL });
+const token = require("./Token.js");
  
 client.commands = new Discord.Collection();
  
