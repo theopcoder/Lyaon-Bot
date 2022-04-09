@@ -1,14 +1,21 @@
 {
-  "name": "lyaon_bot",
-  "version": "1.0.0",
-  "description": "A bot to manage everything in Lyaons servers!",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Lyaon#8196",
-  "license": "ISC",
-  "dependencies": {
-    "discord.js": "^13.6.0"
-  }
+    "name": "djs",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "nodemon index.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "chalk": "^5.0.1",
+        "color": "^4.2.3",
+        "discord.js": "^13.2.0",
+        "glob": "^7.1.7",
+        "mongoose": "^6.0.2",
+        "quick.db": "^7.1.3"
+    }
 }
